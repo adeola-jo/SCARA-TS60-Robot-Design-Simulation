@@ -1,0 +1,20 @@
+MJBot:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  joint_group_position_controller:
+    type: position_controllers/JointGroupPositionController
+    joints:
+      - theta1_joint
+      - theta2_joint
+      - d3_joint
+      - theta4_joint
+    theta1_joint:
+      pid: {p: 1, i: 0.01, d: 0, i_clamp: 1}
+    theta2_joint:
+      pid: {p: 1, i: 0.01, d: 0, i_clamp: 1}
+    d3_joint:
+      pid: {p: 1, i: 0.01, d: 0, i_clamp: 1}
+    theta4_joint:
+      pid: {p: 1, i: 0.01, d: 0, i_clamp: 1}
+  
